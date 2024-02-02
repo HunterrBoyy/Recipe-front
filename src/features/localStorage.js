@@ -10,3 +10,7 @@ export const getUser = () =>{
   const data = localStorage.getItem('user');
   return data === null ? null : JSON.parse(data)
 }
+
+export const clearData = () =>{
+  localStorage.clear()
+}

@@ -6,6 +6,7 @@ import Login from './auth/Login';
 import { ToastContainer } from 'react-toastify';
 import SignUp from './auth/SignUp';
 import UserRoute from './components/UserRoute';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 

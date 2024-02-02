@@ -14,8 +14,6 @@ import { toast } from 'react-toastify';
 const SignUp = () => {
   
   const [userSignUp, {isloading}] = useUserRegisterMutation()
-  const data = useUserRegisterMutation()
-  console.log("data",data)
   const nav = useNavigate()
   
   const registerSchema = Yup.object({
@@ -34,7 +32,7 @@ const SignUp = () => {
     onSubmit:async (val)=>{
       try {
         const response = await userSignUp(val).unwrap();
-        toast.success('successfully registered');
+        toast.success(`${response}`);
         nav(-1);
       } catch (err) {
         toast.error(`${err?.data}`)

@@ -13,7 +13,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup'
 import { useDispatch } from 'react-redux';
 import { useUserLoginMutation } from '../features/authApi';
-import { toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import { userAdd } from '../features/userSlice';
 
 
@@ -38,7 +38,7 @@ console.log(data)
      try {
       const response = await loginUser(val).unwrap();
       dispatch(userAdd(response));
-      toast.success(`${response?.message}`);
+      toast.success(`${response?.message}`)
       nav(-1)
      } catch (err) {
       toast.error(`${err?.data}`)
